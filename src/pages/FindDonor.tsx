@@ -67,23 +67,23 @@ const FindDonor = () => {
         subtitle="জরুরি রক্তের প্রয়োজনে ফেসবুক গ্রুপে পোস্ট করুন"
       />
 
-      <button
-        onClick={handleCopyAndOpen}
-        className="w-full btn-primary flex items-center justify-center gap-2 py-4"
-      >
-        {copied ? (
-          <>
-            <Check className="w-5 h-5" />
-            কপি হয়েছে! গ্রুপে যাচ্ছে...
-          </>
-        ) : (
-          <>
-            <Copy className="w-5 h-5" />
-            গ্রুপে পোস্ট করুন
-            <ExternalLink className="w-4 h-4" />
-          </>
-        )}
-      </button>
+<button
+  onClick={handleCopyAndOpen}
+  className="w-full bg-primary hover:bg-primary/90 text-white flex items-center justify-center gap-2 py-4 rounded-xl font-bold transition-all shadow-lg active:scale-95"
+>
+  {copied ? (
+    <>
+      <Check className="w-5 h-5" />
+      কপি হয়েছে! গ্রুপে যাচ্ছে...
+    </>
+  ) : (
+    <>
+      <Copy className="w-5 h-5" />
+      গ্রুপে পোস্ট করুন
+      <ExternalLink className="w-4 h-4" />
+    </>
+  )}
+</button>
 
       {/* Steps - Like BecomeDonor process */}
       <div className="card-native">
