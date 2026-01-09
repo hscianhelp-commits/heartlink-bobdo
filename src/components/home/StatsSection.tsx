@@ -2,9 +2,9 @@ import { useEffect, useState, useRef } from "react";
 
 const stats = [
   { value: 70000, label: "সদস্য সংখ্যা", color: "text-primary" },
-  { value: 2500, label: "নিবন্ধিত দাতা", color: "text-cyan-500" },
+  { value: 2500, label: "নিবন্ধিত দাতা", color: "text-primary" },
   { value: 5000, label: "জীবন রক্ষা", color: "text-primary" },
-  { value: 100, label: "স্বেচ্ছাসেবক", color: "text-cyan-500" },
+  { value: 100, label: "স্বেচ্ছাসেবক", color: "text-primary" },
 ];
 
 const useCountUp = (end: number, duration: number = 2000) => {
