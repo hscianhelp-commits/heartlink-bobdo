@@ -12,7 +12,7 @@ const BottomNav = () => {
   const location = useLocation();
 
   return (
-    <nav className="fixed bottom-4 left-4 right-4 bg-white rounded-full shadow-[0_-4px_20px_rgba(0,0,0,0.1)] h-16 flex items-center justify-around px-2 z-50">
+    <nav className="bottom-nav h-16 flex items-center justify-around px-2">
       {navItems.map((item) => {
         const isActive = location.pathname === item.path;
         const Icon = item.icon;
@@ -27,7 +27,13 @@ const BottomNav = () => {
                 : "text-muted-foreground hover:text-foreground"
             }`}
           >
-            <Icon className={`w-6 h-6 ${isActive ? "text-primary" : ""}`} />
+            <div
+              className={`w-10 h-10 flex items-center justify-center rounded-xl transition-all duration-200 ${
+                isActive ? "bg-primary/10" : ""
+              }`}
+            >
+              <Icon className={`w-5 h-5 ${isActive ? "text-primary" : ""}`} />
+            </div>
             <span className="text-xs mt-0.5 font-medium">{item.label}</span>
           </Link>
         );
