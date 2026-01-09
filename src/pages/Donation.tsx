@@ -4,9 +4,9 @@ import { toast } from "sonner";
 import PageHeader from "@/components/shared/PageHeader";
 
 const paymentMethods = [
-  { name: "বিকাশ", number: "01722528164", color: "bg-pink-500" },
-  { name: "নগদ", number: "01722528164", color: "bg-orange-500" },
-  { name: "রকেট", number: "01722528164", color: "bg-purple-500" },
+  { name: "বিকাশ", number: "01722528164", bgColor: "bg-pink-50", textColor: "text-pink-500" },
+  { name: "নগদ", number: "01722528164", bgColor: "bg-orange-50", textColor: "text-orange-500" },
+  { name: "রকেট", number: "01722528164", bgColor: "bg-purple-50", textColor: "text-purple-500" },
 ];
 
 const instructions = [
@@ -58,7 +58,7 @@ const Donation = () => {
           >
             <div className="flex items-center gap-3">
               <span
-                className={`w-12 h-12 rounded-xl ${method.color} text-white font-bold flex items-center justify-center text-sm`}
+                className={`w-12 h-12 rounded-xl ${method.bgColor} ${method.textColor} font-bold flex items-center justify-center text-sm`}
               >
                 {method.name.slice(0, 2)}
               </span>
@@ -86,12 +86,10 @@ const Donation = () => {
         href="https://docs.google.com/forms/d/e/1FAIpQLSeRg5unKNOp5OAalKuoPS0FZ2y1W7TUEt5MXvhUKIv-lnt7NA/viewform"
         target="_blank"
         rel="noopener noreferrer"
-        className="block w-full btn-primary text-center py-4"
+        className="flex items-center justify-center gap-2 w-full bg-pink-50 text-pink-600 font-semibold py-4 rounded-xl"
       >
-        <span className="flex items-center justify-center gap-2">
-          অনুদান ফর্ম পূরণ করুন
-          <ExternalLink className="w-4 h-4" />
-        </span>
+        অনুদান ফর্ম পূরণ করুন
+        <ExternalLink className="w-4 h-4" />
       </a>
 
       {/* Payment Instructions */}

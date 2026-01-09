@@ -5,35 +5,40 @@ const emergencyContacts = [
     title: "পরিচালক",
     number: "01780703075",
     icon: AlertCircle,
-    color: "bg-red-500",
+    bgColor: "bg-red-50",
+    iconColor: "text-red-500",
     description: "BOBDO প্রধান",
   },
   {
     title: "BOBDO হেল্প লাইন",
     number: "01722528164",
     icon: Phone,
-    color: "bg-primary",
+    bgColor: "bg-pink-50",
+    iconColor: "text-pink-500",
     description: "২৪/৭ রক্তদান সহায়তা",
   },
   {
     title: "জাতীয় জরুরি সেবা",
     number: "999",
     icon: Ambulance,
-    color: "bg-blue-500",
+    bgColor: "bg-blue-50",
+    iconColor: "text-blue-500",
     description: "অ্যাম্বুলেন্স, পুলিশ, ফায়ার সার্ভিস",
   },
   {
     title: "পুলিশ",
     number: "999",
     icon: Shield,
-    color: "bg-indigo-500",
+    bgColor: "bg-indigo-50",
+    iconColor: "text-indigo-500",
     description: "জরুরি পুলিশ সহায়তা",
   },
   {
     title: "ফায়ার সার্ভিস",
     number: "999",
     icon: Flame,
-    color: "bg-orange-500",
+    bgColor: "bg-orange-50",
+    iconColor: "text-orange-500",
     description: "অগ্নিনির্বাপণ ও উদ্ধার",
   },
 ];
@@ -65,9 +70,9 @@ const Emergency = () => {
               className="card-native flex items-center gap-4"
             >
               <div
-                className={`w-14 h-14 rounded-2xl ${contact.color} flex items-center justify-center flex-shrink-0`}
+                className={`w-14 h-14 rounded-2xl ${contact.bgColor} flex items-center justify-center flex-shrink-0`}
               >
-                <Icon className="w-7 h-7 text-white" />
+                <Icon className={`w-7 h-7 ${contact.iconColor}`} />
               </div>
               <div className="flex-1">
                 <h3 className="font-bold text-foreground">{contact.title}</h3>

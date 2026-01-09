@@ -1,12 +1,12 @@
 const bloodGroups = [
-  { group: "A+", canGive: "A+, AB+", canReceive: "A+, A-, O+, O-", color: "bg-red-500" },
-  { group: "A-", canGive: "A+, A-, AB+, AB-", canReceive: "A-, O-", color: "bg-rose-500" },
-  { group: "B+", canGive: "B+, AB+", canReceive: "B+, B-, O+, O-", color: "bg-blue-500" },
-  { group: "B-", canGive: "B+, B-, AB+, AB-", canReceive: "B-, O-", color: "bg-indigo-500" },
-  { group: "AB+", canGive: "AB+", canReceive: "সকল গ্রুপ", color: "bg-purple-500" },
-  { group: "AB-", canGive: "AB+, AB-", canReceive: "A-, B-, AB-, O-", color: "bg-violet-500" },
-  { group: "O+", canGive: "A+, B+, AB+, O+", canReceive: "O+, O-", color: "bg-green-500" },
-  { group: "O-", canGive: "সকল গ্রুপ", canReceive: "O-", color: "bg-emerald-600" },
+  { group: "A+", canGive: "A+, AB+", canReceive: "A+, A-, O+, O-" },
+  { group: "A-", canGive: "A+, A-, AB+, AB-", canReceive: "A-, O-" },
+  { group: "B+", canGive: "B+, AB+", canReceive: "B+, B-, O+, O-" },
+  { group: "B-", canGive: "B+, B-, AB+, AB-", canReceive: "B-, O-" },
+  { group: "AB+", canGive: "AB+", canReceive: "সকল গ্রুপ" },
+  { group: "AB-", canGive: "AB+, AB-", canReceive: "A-, B-, AB-, O-" },
+  { group: "O+", canGive: "A+, B+, AB+, O+", canReceive: "O+, O-" },
+  { group: "O-", canGive: "সকল গ্রুপ", canReceive: "O-" },
 ];
 
 const BloodGroupChart = () => {
@@ -28,7 +28,7 @@ const BloodGroupChart = () => {
           } ${index % 2 === 0 ? "bg-white" : "bg-gray-50/50"}`}
         >
           <div className="flex items-center gap-2">
-            <span className={`w-8 h-8 rounded-full ${item.color} text-white text-xs font-bold flex items-center justify-center`}>
+            <span className="w-8 h-8 rounded-full bg-primary text-white text-xs font-bold flex items-center justify-center">
               {item.group}
             </span>
           </div>

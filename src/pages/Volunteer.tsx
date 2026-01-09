@@ -66,12 +66,10 @@ const Volunteer = () => {
         href="https://docs.google.com/forms/d/1r6AHUr2biiREYTnF-Bqb0eK9YINEyPbAk52dqmMcLvc/viewform?edit_requested=true"
         target="_blank"
         rel="noopener noreferrer"
-        className="block w-full btn-primary text-center py-4"
+        className="flex items-center justify-center gap-2 w-full bg-blue-50 text-blue-600 font-semibold py-4 rounded-xl"
       >
-        <span className="flex items-center justify-center gap-2">
-          স্বেচ্ছাসেবক ফর্ম পূরণ করুন
-          <ExternalLink className="w-4 h-4" />
-        </span>
+        স্বেচ্ছাসেবক ফর্ম পূরণ করুন
+        <ExternalLink className="w-4 h-4" />
       </a>
 
       {/* Qualifications */}
