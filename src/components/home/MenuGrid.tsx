@@ -13,16 +13,16 @@ import {
 } from "lucide-react";
 
 const menuItems = [
-  { path: "/find-donor", icon: Search, label: "ডোনার খুঁজুন", bgColor: "bg-red-50", iconColor: "text-red-500" },
-  { path: "/become-donor", icon: UserPlus, label: "ডোনার হন", bgColor: "bg-blue-50", iconColor: "text-blue-500" },
-  { path: "/volunteer", icon: Users, label: "স্বেচ্ছাসেবক", bgColor: "bg-cyan-50", iconColor: "text-cyan-500" },
-  { path: "/donation", icon: Heart, label: "অনুদান", bgColor: "bg-pink-50", iconColor: "text-pink-400" },
-  { path: "/hospitals", icon: Building2, label: "হাসপাতাল", bgColor: "bg-gray-100", iconColor: "text-gray-600" },
-  { path: "/first-aid", icon: Cross, label: "প্রাথমিক চিকিৎসা", bgColor: "bg-rose-50", iconColor: "text-rose-500" },
-  { path: "/certificate", icon: Award, label: "সার্টিফিকেট", bgColor: "bg-orange-50", iconColor: "text-orange-400" },
-  { path: "/notice", icon: Bell, label: "নোটিশ", bgColor: "bg-blue-50", iconColor: "text-blue-400" },
-  { path: "/emergency", icon: AlertCircle, label: "জরুরি", bgColor: "bg-amber-50", iconColor: "text-amber-500" },
-  { path: "/about", icon: Info, label: "আমাদের সম্পর্কে", bgColor: "bg-blue-50", iconColor: "text-blue-400" },
+  { path: "/find-donor", icon: Search, label: "ডোনার খুঁজুন", bgColor: "bg-red-100", iconColor: "text-red-500" },
+  { path: "/become-donor", icon: UserPlus, label: "ডোনার হন", bgColor: "bg-green-100", iconColor: "text-green-500" },
+  { path: "/volunteer", icon: Users, label: "স্বেচ্ছাসেবক", bgColor: "bg-cyan-100", iconColor: "text-cyan-600" },
+  { path: "/donation", icon: Heart, label: "অনুদান", bgColor: "bg-pink-100", iconColor: "text-pink-500" },
+  { path: "/hospitals", icon: Building2, label: "হাসপাতাল", bgColor: "bg-purple-100", iconColor: "text-purple-500" },
+  { path: "/first-aid", icon: Cross, label: "প্রাথমিক চিকিৎসা", bgColor: "bg-rose-100", iconColor: "text-rose-500" },
+  { path: "/certificate", icon: Award, label: "সার্টিফিকেট", bgColor: "bg-orange-100", iconColor: "text-orange-500" },
+  { path: "/notice", icon: Bell, label: "নোটিশ", bgColor: "bg-blue-100", iconColor: "text-blue-500" },
+  { path: "/emergency", icon: AlertCircle, label: "জরুরি", bgColor: "bg-amber-100", iconColor: "text-amber-500" },
+  { path: "/about", icon: Info, label: "আমাদের সম্পর্কে", bgColor: "bg-sky-100", iconColor: "text-sky-500" },
 ];
 
 const MenuGrid = () => {
@@ -34,12 +34,12 @@ const MenuGrid = () => {
           <Link
             key={item.path}
             to={item.path}
-            className="bg-white rounded-2xl p-4 shadow-sm border border-gray-100 flex flex-col items-start gap-3 transition-all active:scale-[0.98] hover:shadow-md"
+            className="bg-white rounded-2xl p-5 shadow-sm border border-gray-100 flex flex-col items-center justify-center gap-3 transition-all active:scale-[0.98] hover:shadow-md"
           >
-            <div className={`w-14 h-14 rounded-2xl ${item.bgColor} flex items-center justify-center`}>
-              <Icon className={`w-7 h-7 ${item.iconColor}`} />
+            <div className={`w-16 h-16 rounded-full ${item.bgColor} flex items-center justify-center`}>
+              <Icon className={`w-8 h-8 ${item.iconColor}`} />
             </div>
-            <span className="text-sm font-medium text-foreground">
+            <span className="text-sm font-medium text-foreground text-center">
               {item.label}
             </span>
           </Link>
