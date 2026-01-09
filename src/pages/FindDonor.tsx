@@ -69,7 +69,7 @@ const FindDonor = () => {
 
 <button
   onClick={handleCopyAndOpen}
-  className="w-full bg-primary hover:bg-primary/90 text-white flex items-center justify-center gap-2 py-4 rounded-xl font-bold transition-all shadow-lg active:scale-95"
+  className="flex items-center justify-center gap-2 w-full bg-red-50 text-red-600 font-semibold py-4 rounded-xl"
 >
   {copied ? (
     <>
