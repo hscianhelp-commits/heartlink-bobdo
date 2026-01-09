@@ -10,7 +10,7 @@ const Index = () => {
       
       <div className="space-y-6 py-6">
         <SocialLinks />
-        
+                <StatsSection />
         {/* Section Title */}
         <div className="px-4">
           <h2 className="text-lg font-bold text-foreground">আমাদের সেবা</h2>
@@ -18,7 +18,7 @@ const Index = () => {
         
         <MenuGrid />
         
-        <StatsSection />
+
       </div>
     </div>
   );
