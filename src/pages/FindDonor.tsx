@@ -97,11 +97,11 @@ const FindDonor = () => {
         </div>
       </div>
 
-      {/* Required Info */}
+      {/* Required Info - Code Style */}
       <div className="card-native">
         <h2 className="section-title">প্রয়োজনীয় তথ্য</h2>
-        <div className="bg-muted rounded-xl p-4">
-          <pre className="text-sm text-foreground whitespace-pre-wrap font-sans">
+        <div className="bg-gray-900 rounded-xl p-4 overflow-x-auto">
+          <pre className="text-sm text-green-400 whitespace-pre-wrap font-mono leading-relaxed">
             {postTemplate}
           </pre>
         </div>
