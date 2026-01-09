@@ -103,14 +103,14 @@ const FindDonor = () => {
         </div>
       </div>
 
-      {/* Post Template */}
+{/* Post Template */}
       <div className="card-native">
         <h2 className="section-title flex items-center gap-2">
           <Clipboard className="w-5 h-5 text-primary" />
           পোস্ট টেমপ্লেট
         </h2>
         <div className="bg-muted rounded-xl p-4">
-          <pre className="text-sm text-foreground whitespace-pre-wrap font-sans leading-relaxed">
+          <pre className="text-xs text-foreground/80 whitespace-pre-wrap font-sans leading-relaxed">
             {postTemplate}
           </pre>
         </div>
