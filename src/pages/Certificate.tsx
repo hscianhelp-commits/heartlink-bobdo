@@ -74,12 +74,10 @@ const Certificate = () => {
               href={cert.formLink}
               target="_blank"
               rel="noopener noreferrer"
-              className="block w-full btn-primary text-center py-3"
+              className="flex items-center justify-center gap-2 w-full bg-primary/10 text-primary font-semibold py-3 rounded-xl"
             >
-              <span className="flex items-center justify-center gap-2">
-                আবেদন করুন
-                <ExternalLink className="w-4 h-4" />
-              </span>
+              আবেদন করুন
+              <ExternalLink className="w-4 h-4" />
             </a>
           </div>
         ))}

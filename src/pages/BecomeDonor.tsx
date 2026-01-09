@@ -51,12 +51,10 @@ const BecomeDonor = () => {
         href="https://docs.google.com/forms/d/e/1FAIpQLSdaQ3_aRcF8Fn306NamZZ87AKy4Vu-e5wiQ92jPNLdChWfUrA/viewform"
         target="_blank"
         rel="noopener noreferrer"
-        className="block w-full btn-primary text-center py-4"
+        className="flex items-center justify-center gap-2 w-full bg-green-50 text-green-600 font-semibold py-4 rounded-xl"
       >
-        <span className="flex items-center justify-center gap-2">
-          রক্তদাতা ফর্ম পূরণ করুন
-          <ExternalLink className="w-4 h-4" />
-        </span>
+        রক্তদাতা ফর্ম পূরণ করুন
+        <ExternalLink className="w-4 h-4" />
       </a>
 
       {/* Conditions */}
@@ -89,8 +87,8 @@ const BecomeDonor = () => {
         <div className="space-y-4">
           {process.map((item, index) => (
             <div key={index} className="flex items-start gap-4">
-              <div className="w-10 h-10 rounded-xl bg-primary flex items-center justify-center flex-shrink-0">
-                <span className="text-white font-bold">{index + 1}</span>
+              <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center flex-shrink-0">
+                <span className="text-primary font-bold">{index + 1}</span>
               </div>
               <div className="pt-1">
                 <h3 className="font-bold text-foreground">{item.step}</h3>
