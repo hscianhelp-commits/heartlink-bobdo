@@ -31,7 +31,6 @@ const SocialLinks = () => {
             target="_blank"
             rel="noopener noreferrer"
             className="flex flex-col items-center gap-1 transition-transform active:scale-95"
-            aria-label={link.label}
           >
             <Icon className="w-7 h-7 text-red-600" />
           </a>

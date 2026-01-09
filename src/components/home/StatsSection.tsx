@@ -1,11 +1,10 @@
-import { Users, Heart, Award, UserCheck } from "lucide-react";
 import { useEffect, useState, useRef } from "react";
 
 const stats = [
-  { value: 70000, label: "সদস্য সংখ্যা", icon: Users, suffix: "+" },
-  { value: 2500, label: "নিবন্ধিত দাতা", icon: UserCheck, suffix: "+" },
-  { value: 5000, label: "জীবন রক্ষা", icon: Heart, suffix: "+" },
-  { value: 100, label: "স্বেচ্ছাসেবক", icon: Award, suffix: "+" },
+  { value: 70000, label: "সদস্য সংখ্যা", color: "text-primary" },
+  { value: 2500, label: "নিবন্ধিত দাতা", color: "text-cyan-500" },
+  { value: 5000, label: "জীবন রক্ষা", color: "text-primary" },
+  { value: 100, label: "স্বেচ্ছাসেবক", color: "text-cyan-500" },
 ];
 
 const useCountUp = (end: number, duration: number = 2000) => {
@@ -50,18 +49,13 @@ const useCountUp = (end: number, duration: number = 2000) => {
 
 const StatCard = ({ stat }: { stat: typeof stats[0] }) => {
   const { count, ref } = useCountUp(stat.value);
-  const Icon = stat.icon;
 
   return (
-    <div ref={ref} className="card-native text-center">
-      <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mx-auto mb-2">
-        <Icon className="w-6 h-6 text-primary" />
-      </div>
-      <p className="text-2xl font-bold text-primary">
-        {count.toLocaleString("bn-BD")}
-        {stat.suffix}
+    <div ref={ref} className="bg-white rounded-2xl p-4 text-center shadow-sm border border-gray-100">
+      <p className={`text-2xl font-bold ${stat.color}`}>
+        {count.toLocaleString()}+
       </p>
-      <p className="text-sm text-muted-foreground">{stat.label}</p>
+      <p className="text-sm text-muted-foreground mt-1">{stat.label}</p>
     </div>
   );
 };
@@ -69,7 +63,6 @@ const StatCard = ({ stat }: { stat: typeof stats[0] }) => {
 const StatsSection = () => {
   return (
     <div className="px-4">
-      <h2 className="text-lg font-bold text-foreground mb-4">আমাদের অর্জন</h2>
       <div className="grid grid-cols-2 gap-3">
         {stats.map((stat, index) => (
           <StatCard key={index} stat={stat} />

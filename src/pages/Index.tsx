@@ -5,11 +5,13 @@ import StatsSection from "@/components/home/StatsSection";
 
 const Index = () => {
   return (
-    <div className="animate-fade-in">
+    <div className="animate-fade-in pb-8">
       <HeroSection />
       
       <div className="space-y-6 py-6">
         <SocialLinks />
+        
+        <StatsSection />
         
         {/* Section Title */}
         <div className="px-4">
@@ -17,8 +19,6 @@ const Index = () => {
         </div>
         
         <MenuGrid />
-        
-        <StatsSection />
       </div>
     </div>
   );
